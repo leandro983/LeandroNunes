@@ -1,0 +1,202 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+header {
+    background-image: url(../img/bannerIndex.png);
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    height: 300px;
+}
+
+nav {
+    background-color: #02645c;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-transform: uppercase;
+    color: #00312d;
+}
+
+/* Estilos para o conteúdo */
+main {
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto;
+}
+
+section {
+    margin: 1%;
+    background-color: #f3f3f3;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Estilo para as fotos */
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; 
+    padding: 20px; 
+    justify-items: center;
+}
+
+.fotos figure {
+    margin: 0;
+    width: 100%; 
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.fotos img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.fotos figcaption {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; 
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Formatação habiidades lista */
+#habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#habilidades ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#habilidades li {
+    padding: 10px;
+    background-color: #02645c;
+    border-radius: 3px;
+    color: rgb(206, 206, 206);
+    text-align: center;
+}
+
+#habilidades ul li:hover {
+    background-color: #e6e6e6;
+    color:#02645c;
+    cursor: pointer;
+}
+
+#habilidades ul li a {
+    text-decoration: none;
+    color: rgb(206, 206, 206);
+}
+
+#habilidades li a:hover {
+    color: #02645c;
+}
+
+/* Formulário */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0;
+        background-image: url(../img/bannerIndex_p.png);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #habilidades ul {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .fotos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
